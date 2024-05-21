@@ -84,7 +84,7 @@ This abstraction will also allow you to change the type of storage easily withou
 
 The console will be a tool to validate this storage engine
 
-![The console]()
+![The console](https://github.com/Abner261/AirBnB_clone_v2/blob/master/The%20console.png?raw=true)
 
 ### Web static
 
@@ -92,3 +92,25 @@ The console will be a tool to validate this storage engine
 - create the HTML of your application
 - create template of each object
 
+![Web static](https://github.com/Abner261/AirBnB_clone_v2/blob/master/Web%20static.png?raw=true)
+
+### MySQL storage
+
+- replace the file storage by a Database storage
+- map your models to a table in database by using an O.R.M.
+
+![MySQL storage](https://github.com/Abner261/AirBnB_clone_v2/blob/master/MySQL%20storage.png?raw=true)
+
+### Web framework - templating
+
+- create your first web server in Python
+- make your static HTML file dynamic by using objects stored in a file or database
+
+![Web framework ](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/ceff4f064c2500ef00c5b4bfd214f33e066b170b/Web%20framework.png)
+
+### RESTful API
+
+- expose all your objects stored via a JSON web interface
+- manipulate your objects via a RESTful API
+
+![RESTful API]()
