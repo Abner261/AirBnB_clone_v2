@@ -84,4 +84,11 @@ This abstraction will also allow you to change the type of storage easily withou
 
 The console will be a tool to validate this storage engine
 
+![The console]()
+
+### Web static
+
+- learn HTML/CSS
+- create the HTML of your application
+- create template of each object
 
