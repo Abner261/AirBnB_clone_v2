@@ -211,7 +211,7 @@ And the process of deserialization?
 
 ### `*args, **kwargs`
 
-* How To Use them](https://www.digitalocean.com/community/tutorials/how-to-use-args-and-kwargs-in-python-3)
+* [How To Use them](https://www.digitalocean.com/community/tutorials/how-to-use-args-and-kwargs-in-python-3)
 
 How do you pass arguments to a function?
 
@@ -221,3 +221,138 @@ def my_fct(param_1, param_2):
 
 my_fct("Best", "School")
 ```
+
+But with this function definition, you must call `my_fct` with 2 parameters, no more, no less.
+
+Can it be dynamic? Yes you can:
+
+```sh
+def my_fct(*args, **kwargs):
+    ...
+
+my_fct("Best", "School")
+```
+
+* What? What’s `*args` and `**kwargs?`
+
+	- `*args` is a Tuple that contains all arguments
+	- `*kwargs` is a dictionary that contains all arguments by key/value
+
+A dictionary? But why?
+
+So, to make it clear, `*args` is the list of anonymous arguments, no name, just an order. `**kwargs` is the dictionary with all named arguments.
+
+Examples:
+
+```sh
+def my_fct(*args, **kwargs):
+    print("{} - {}".format(args, kwargs))
+
+my_fct() # () - {}
+my_fct("Best") # ('Best',) - {}
+my_fct("Best", 89) # ('Best', 89) - {}
+my_fct(name="Best") # () - {'name': 'Best'}
+my_fct(name="Best", number=89) # () - {'name': 'Best', 'number': 89}
+my_fct("School", 12, name="Best", number=89) # ('School', 12) - {'name': 'Best', 'number': 89}
+```
+
+Perfect? Of course you can mix both, but the order should be first all anonymous arguments, and after named arguments.
+
+Last example:
+
+```sh
+def my_fct(*args, **kwargs):
+    print("{} - {}".format(args, kwargs))
+
+a_dict = { 'name': "Best", 'age': 89 }
+
+my_fct(a_dict) # ({'age': 89, 'name': 'Best'},) - {}
+my_fct(*a_dict) # ('age', 'name') - {}
+my_fct(**a_dict) # () - {'age': 89, 'name': 'Best'}
+```
+
+You can play with these 2 arguments to clearly understand where and how your variables are stored.
+
+### `datetime`
+
+`datetime` is a Python module to manipulate date, time etc…
+
+In this example, you create an instance of `datetime` with the current date and time:
+
+```sh
+from datetime import datetime
+
+date_now = datetime.now()
+print(type(date_now)) # <class 'datetime.datetime'>
+print(date_now) # 2017-06-08 20:42:42.170922
+```
+
+`date_now` is an object, so you can manipulate it:
+
+```sh
+from datetime import timedelta
+
+date_tomorrow = date_now + timedelta(days=1)
+print(date_tomorrow) # 2017-06-09 20:42:42.170922
+```
+
+… you can also store it:
+
+```sh
+a_dict = { 'my_date': date_now }
+print(type(a_dict['my_date'])) # <class 'datetime.datetime'>
+print(a_dict) # {'my_date': datetime.datetime(2017, 6, 8, 20, 42, 42, 170922)}
+```
+
+What? What’s this format when a `datetime` instance is in a datastructure??? It’s unreadable.
+
+How to make it readable: [strftime](https://strftime.org/)
+
+```sh
+print(date_now.strftime("%A")) # Thursday
+print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 20:42:42
+```
+
+### Data diagram
+
+![Data diagram](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/dc5f76657e708ea023ccc87de0abc84852a3a98a/Data%20diagram.jpg)
+
+### Background Context
+
+Ever since you completed project [0x0F. Load balancer](https://intranet.alxswe.com/projects/275) of the SysAdmin track, you’ve had 2 web servers + 1 load balancer but nothing to distribute with them.
+
+It’s time to make your work public!
+
+In this first deployment project, you will be deploying your `web_static` work. You will use `Fabric` (for Python3). Fabric is a Python library and command-line tool for streamlining the use of SSH for application deployment or systems administration tasks. It provides a basic suite of operations for executing local or remote shell commands (normally or via `sudo`) and uploading/downloading files, as well as auxiliary functionality such as prompting the running user for input, or aborting execution. This concept is important: execute commands locally or remotely. Locally means in your laptop (physical laptop or inside your Vagrant), and Remotely means on your server(s). Fabric is taking care of all network connections (SSH, SCP etc.), it’s an easy tool for transferring, executing, etc. commands from locale to a remote server.
+
+![AirBnB_clone_v2](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/196e202380816b3ebb65f11a96faced204d97224/aribnb_diagram_0.jpg)
+
+### Resources
+
+* **Read or watch:**
+
+	- [How to use Fabric](https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments)
+	- [How to use Fabric in Python](https://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python)
+	- [Fabric and command line options](https://docs.fabfile.org/en/1.13/usage/fab.html)
+	- [CI/CD concept page](https://intranet.alxswe.com/concepts/43)
+	- [Nginx configuration for beginners](https://nginx.org/en/docs/beginners_guide.html)
+	- [Difference between root and alias on NGINX](https://blog.heitorsilva.com/en/nginx/diferenca-entre-root-e-alias-do-nginx/)
+	- [Fabric for Python 3](https://github.com/mathiasertl/fabric)
+	- [Fabric Documentation](https://www.fabfile.org/)
+
+### Learning Objectives
+
+	- At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google:**
+
+* **General**
+
+	- What is Fabric
+	- How to deploy code to a server easily
+	- What is a `tgz` archive
+	- How to execute Fabric command locally
+	- How to execute Fabric command remotely
+	- How to transfer files with Fabric
+	- How to manage Nginx configuration
+	- What is the difference between `root` and `alias` in a Nginx configuration
+
+
