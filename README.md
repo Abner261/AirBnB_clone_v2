@@ -340,7 +340,7 @@ In this first deployment project, you will be deploying your `web_static` work. 
 	- [Fabric for Python 3](https://github.com/mathiasertl/fabric)
 	- [Fabric Documentation](https://www.fabfile.org/)
 
-### Learning Objectives
+* **Learning Objectives**
 
 	- At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google:**
 
