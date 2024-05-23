@@ -371,4 +371,35 @@ In this first deployment project, you will be deploying your `web_static` work. 
 	- All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
 	- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
+### Bash Scripts
+
+	- Allowed editors: `vi`, `vim`, `emacs`
+	- All your files will be interpreted on Ubuntu 20.04 LTS
+	- All your files should end with a new line
+	- A `README.md` file at the root of the folder of the project is mandatory
+	- All your Bash script files must be executable
+	- Your Bash script must pass `Shellcheck` (version `0.3.3-1~ubuntu20.04.1` via `apt-get`) without any errors
+	- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`
+	- The second line of all your Bash scripts should be a comment explaining what is the script doing
+
+## More Info
+
+### Install Fabric for Python 3 - version 1.14.post1
+
+```sh
+$ pip3 uninstall Fabric
+$ sudo apt-get install libffi-dev
+$ sudo apt-get install libssl-dev
+$ sudo apt-get install build-essential
+$ sudo apt-get install python3.4-dev
+$ sudo apt-get install libpython3-dev
+$ pip3 install pyparsing
+$ pip3 install appdirs
+$ pip3 install setuptools==40.1.0
+$ pip3 install cryptography==2.8
+$ pip3 install bcrypt==3.1.7
+$ pip3 install PyNaCl==1.3.0
+$ pip3 install Fabric3==1.14.post1
+```
+
 
