@@ -1,5 +1,11 @@
 ## 0x03. AirBnB clone - Deploy static
 
+![DevOps](https://img.shields.io/badge/DevOps-red)
+![Python](https://img.shields.io/badge/Python-red)
+![SysAdmin](https://img.shields.io/badge/SysAdmin-red)
+![Scripting](https://img.shields.io/badge/Scripting-red)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-red)
+
 ### Concepts
 
 * _For this project, we expect you to look at these concepts:_
