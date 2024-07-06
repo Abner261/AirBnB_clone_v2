@@ -407,3 +407,11 @@ $ pip3 install bcrypt==3.1.7
 $ pip3 install PyNaCl==1.3.0
 $ pip3 install Fabric3==1.14.post1
 ```
+
+**Video library**  (1 total)
+
+[Deploy static files with Fabric]()
+
+## Tasks
+
+0. [Prepare your web servers](0-setup_web_static.sh)
