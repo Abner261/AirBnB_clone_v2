@@ -433,3 +433,50 @@ Tip
 Your program should always exit successfully. Don’t forget to run your script on both of your web servers.
 
 In optional, you will redo this task but by using Puppet
+
+```sh
+ubuntu@89-web-01:~/$ sudo ./0-setup_web_static.sh
+ubuntu@89-web-01:~/$ echo $?
+0
+ubuntu@89-web-01:~/$ ls -l /data
+total 4
+drwxr-xr-x 1 ubuntu ubuntu     4096 Mar  7 05:17 web_static
+ubuntu@89-web-01:~/$ ls -l /data/web_static
+total 8
+lrwxrwxrwx 1 ubuntu ubuntu   30 Mar 7 22:30 current -> /data/web_static/releases/test
+drwxr-xr-x 3 ubuntu ubuntu 4096 Mar 7 22:29 releases
+drwxr-xr-x 2 ubuntu ubuntu 4096 Mar 7 22:29 shared
+ubuntu@89-web-01:~/$ ls /data/web_static/current
+index.html
+ubuntu@89-web-01:~/$ cat /data/web_static/current/index.html
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+ubuntu@89-web-01:~/$ curl localhost/hbnb_static/index.html
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+ubuntu@89-web-01:~/$ 
+```
+Repo:
+
+GitHub repository: AirBnB_clone_v2
+File: 0-setup_web_static.sh
+
+1. [Compress before sending](1-pack_web_static.py)
+
+Write a Fabric script that generates a .tgz archive from the contents of the web_static folder of your AirBnB Clone repo, using the function do_pack.
+
+Prototype: def do_pack():
+All files in the folder web_static must be added to the final archive
+All archives must be stored in the folder versions (your function should create this folder if it doesn’t exist)
+The name of the archive created must be web_static_<year><month><day><hour><minute><second>.tgz
+The function do_pack must return the archive path if the archive has been correctly generated. Otherwise, it should return None
