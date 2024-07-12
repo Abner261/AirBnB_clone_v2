@@ -736,3 +736,62 @@ Write a Fabric script (based on the file `3-deploy_web_static.py`) that deletes 
 * All remote commands must be executed on both of your web servers (using the `env.hosts = ['<IP web-01>', 'IP web-02'`] variable in your script)
 
 In the following example, the SSH key and the username used for accessing to the server are passed in the command line. Of course, you could define them as Fabric environment variables (ex: env.user =…)
+
+```sh
+guillaume@ubuntu:~/AirBnB_clone_v2$ ls -ltr versions
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015414.tgz
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015448.tgz
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015507.tgz
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015620.tgz
+guillaume@ubuntu:~/AirBnB_clone_v2$ fab -f 100-clean_web_static.py do_clean:number=2 -i my_ssh_private_key -u ubuntu > /dev/null 2>&1
+guillaume@ubuntu:~/AirBnB_clone_v2$ ls -ltr versions
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015507.tgz
+-rw-r--r-- 1 vagrant vagrant 27280335 Mar 15  2017 web_static_20170315015620.tgz
+guillaume@ubuntu:~/AirBnB_clone_v2$ 
+```
+
+* **Repo:**
+
+	- GitHub repository: `AirBnB_clone_v2`
+	- File: `100-clean_web_static.py`
+
+5. [Puppet for setup](101-setup_web_static.pp)
+
+Redo the task #0 but by using Puppet:
+
+```sh
+ubuntu@89-web-01:~/$ puppet apply 101-setup_web_static.pp
+....
+ubuntu@89-web-01:~/$ ls -l /data
+total 4
+drwxr-xr-x 1 ubuntu ubuntu     4096 Mar  7 05:17 web_static
+ubuntu@89-web-01:~/$ ls -l /data/web_static
+total 8
+lrwxrwxrwx 1 root root   30 Mar 7 22:30 current -> /data/web_static/releases/test
+drwxr-xr-x 3 root root 4096 Mar 7 22:29 releases
+drwxr-xr-x 2 root root 4096 Mar 7 22:29 shared
+ubuntu@89-web-01:~/$ ls /data/web_static/current
+index.html
+ubuntu@89-web-01:~/$ cat /data/web_static/current/index.html
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+ubuntu@89-web-01:~/$ curl localhost/hbnb_static/index.html
+<html>
+  <head>
+  </head>
+  <body>
+    Holberton School
+  </body>
+</html>
+ubuntu@89-web-01:~/$ 
+```
+
+* **Repo:**
+
+	- GitHub repository: `AirBnB_clone_v2`
+	- File: `101-setup_web_static.pp`
