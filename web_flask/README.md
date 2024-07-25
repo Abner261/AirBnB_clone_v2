@@ -103,8 +103,9 @@ The console will be a tool to validate this storage engine
 * `tests` directory will contain all unit tests.
 * `console.py` file is the entry point of our command interpreter.
 * `models/base_model.py` file is the base class of all our models. It contains common elements:
-        - attributes: `id`, `created_at` and `updated_at`
-        - methods: `save()` and `to_json()`
+	- attributes: `id`, `created_at` and `updated_at`
+	- methods: `save()` and `to_json()`
+
 - `models/engine` directory will contain all storage classes (using the same prototype). For the moment you will have only one: `file_storage.py`
 
 ### Storage
