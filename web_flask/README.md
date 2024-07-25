@@ -155,8 +155,8 @@ But how it works?
 
 * First, let’s look at `save(students)`:
 
-        - Can I write each `Student` object to a file => NO, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
-        - Can I write each `Student.name` to a file => YES, but imagine you have other attributes to describe Student? It would start to be become too complex.
+	- Can I write each `Student` object to a file => NO, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
+	- Can I write each `Student.name` to a file => YES, but imagine you have other attributes to describe Student? It would start to be become too complex.
 
 The best solution is to convert this list of Student objects to a JSON representation.
 
