@@ -1302,7 +1302,11 @@ In the browser:
 
 ![Places](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/19c380fb068c5909923bca11e7a19dd0e2a3f63e/web_flask/Places.jpg)
 
-![Private Studio]()
+![Private Studio](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/7f95878a02952768bc706b3b13e3ab975d871088/web_flask/Private%20Studio.jpg)
+
+![Beautiful vs Private](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/70e73dfad87c84a26bb320919ff54c4d5b029300/web_flask/Beautiful%20vs%20Private%20Studios%20.jpg)
+
+![1 Bedroom house](https://github.com/Abner261/AirBnB_clone_v2/blob/master/web_flask/1%20Bedroom%20House.jpg?raw=true)
 
 **Repo:**
 
