@@ -1243,6 +1243,14 @@ guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 
 In the browser:
 
+![In the browser:](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/3fa27dad0379092473e976f5ee4a8ff7cfbad7f1/web_flask/In%20the%20browser.jpg)
+
+![Alabama & Arizona](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/a985a296a327bd23b153cb540660507d00731412/web_flask/Alabama%20%26%20Arizona.jpg)
+
+![Webpage for filtering states and amenities](https://github.com/Abner261/AirBnB_clone_v2/blob/master/web_flask/Illinois%20&%20indiana.jpg?raw=true)
+
+![Webpage for filtering amenities](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/c3202d9554d4076d1f1e7566ff21ba8aa15f6002/web_flask/Amenities.jpg)
+
 **Repo:**
 
 - GitHub repository: `AirBnB_clone_v2`
