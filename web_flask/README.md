@@ -1300,6 +1300,10 @@ guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 
 In the browser:
 
+![Places](https://raw.githubusercontent.com/Abner261/AirBnB_clone_v2/19c380fb068c5909923bca11e7a19dd0e2a3f63e/web_flask/Places.jpg)
+
+![Private Studio]()
+
 **Repo:**
 
 - GitHub repository: `AirBnB_clone_v2`
