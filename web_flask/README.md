@@ -1284,7 +1284,7 @@ Write a script that starts a Flask web application:
   - Make sure all HTML tags from objects are correctly used (example: `<BR />` must generate a new line)
   - `State`, `City`, `Amenity` and `Place` objects must be loaded from `DBStorage` and **sorted by name** (A->Z)
 - You must use the option `strict_slashes=False` in your route definition
-- Import this [100-dump](web_flask/100-hbnb.sql) to have some data
+- Import this [100-dump](https://github.com/Abner261/AirBnB_clone_v2/blob/master/web_flask/100-hbnb.sql) to have some data
 
 **IMPORTANT**
 
